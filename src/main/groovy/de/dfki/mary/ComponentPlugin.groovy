@@ -19,7 +19,7 @@ class ComponentPlugin implements Plugin<Project> {
         project.pluginManager.apply(JavaLibraryPlugin)
         project.pluginManager.apply(GroovyPlugin)
 
-        project.sourceCompatibility = JavaVersion.VERSION_1_8
+        project.java.sourceCompatibility = JavaVersion.VERSION_1_8
 
         project.extensions.create('marytts', MaryttsExtension, project)
         project.marytts {
