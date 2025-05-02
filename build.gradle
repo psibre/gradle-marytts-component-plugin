@@ -5,9 +5,9 @@ plugins {
     id 'signing'
 }
 
-group 'de.dfki.mary'
-version '0.4.0-SNAPSHOT'
-description 'Utility plugin to build MaryTTS components with Gradle'
+group = 'de.dfki.mary'
+version = '0.4.0-SNAPSHOT'
+description = 'Utility plugin to build MaryTTS components with Gradle'
 ext.isReleaseVersion = !version.endsWith('-SNAPSHOT')
 
 gradlePlugin {
@@ -103,8 +103,8 @@ publishing {
     }
     repositories {
         maven {
-            name 'OSSRH'
-            url isReleaseVersion ? 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+            name = 'OSSRH'
+            url = isReleaseVersion ? 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
                     : 'https://oss.sonatype.org/content/repositories/snapshots'
             credentials(PasswordCredentials)
         }
